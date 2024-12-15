@@ -1,0 +1,3 @@
+auto ident              - Shift + Alt + F
+apaga linha             - Ctrl + Shift + K
+quebra linha invertida  - Ctrl + Shift + Enter
