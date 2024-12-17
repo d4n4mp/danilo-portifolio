@@ -5,10 +5,10 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaFigma,
-  FaNodeJs,
+  FaNodeJs, FaJava, FaDocker  
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { TbBrandCpp } from "react-icons/tb";
+import { SiTailwindcss, SiNextdotjs, SiSpring, SiStrapi  } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
@@ -17,16 +17,20 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Button } from "@/components/ui/button"
+import { FiDownload } from "react-icons/fi"
 import { motion } from "framer-motion";
+import Image from "next/image"
+
 
 const about = {
-  title: "About me",
+  title: "Sobre mim",
   description:
-    "ahsjkhasjhfka sfa skfahskflasjlpoas j  asljflasjfklajs laksjfklas",
+    "Me chamo Danilo Almeida Maletta, sou pesquisador e desenvolvedor de software com experiência em todas as camadas de atuação. Nesta plataforma, apresento todo o trabalho que desenvolvi ao longo da minha carreira. Fico à disposição para contato e futuras colaborações.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Danilo Maletta",
+      fieldValue: "Danilo Almeida Maletta",
     },
     {
       fieldName: "Telefone",
@@ -38,7 +42,7 @@ const about = {
     },
     {
       fieldName: "Nacionalidade",
-      fieldValue: "Brazilian",
+      fieldValue: "Brasileiro",
     },
     {
       fieldName: "Email",
@@ -46,7 +50,7 @@ const about = {
     },
     {
       fieldName: "Lenguages",
-      fieldValue: "English, Portuguese",
+      fieldValue: "Português / Inglês",
     },
   ],
 };
@@ -54,43 +58,38 @@ const about = {
 //experience data
 const experience = {
   icon: "/assets/resume/badge.svg",
-  title: "My experience",
-  description: "hashdjashjd ajkshdkjsa akjshjhds",
+  title: "Minha experiência",
+  description: "Construí minha carreira em um instituto de pesquisa e desenvolvimento, onde tive a oportunidade única de trabalhar em projetos de diversas áreas tecnológicas e com diferentes soluções. Esse ambiente multidisciplinar me permitiu explorar, na prática, todos os campos de atuação de uma solução tecnológica: desde o desenvolvimento de dispositivos com software de baixo nível, passando por aplicações high-end com interfaces gráficas fluidas, até a gestão completa de projetos. Essa experiência diversificada ampliou minha visão sistêmica e aprofundou minha expertise em todo o ciclo de desenvolvimento de tecnologias.",
   items: [
     {
-      company: "Teach Solutions Inc.",
-      position: "Full Stack Developer",
-      duration: "2017 - 2021",
+      company: "Cemig GT",
+      position: "Gestão de Projeto & Firmware Dev.",
+      duration: "2022 - 2024",
     },
     {
-      company: "Teach Solutions Inc.",
-      position: "Web Design Studio",
-      duration: "2017 - 2021",
+      company: "Grupo ICTS",
+      position: "Full Stack Dev.",
+      duration: "2020 - 2022",
     },
     {
-      company: "Software Development Firmware",
-      position: "Pleno Developer",
-      duration: "2017 - 2021",
+      company: "LG / Grupo ICTS",
+      position: "Gestão de Projeto - Firmware Dev.",
+      duration: "2018 - 2020",
     },
     {
-      company: "Teach Academy",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
+      company: "NCR",
+      position: "Firmware Dev.",
+      duration: "2017 - 2018",
     },
     {
-      company: "Teach Academy 2",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
+      company: "Sicoob",
+      position: "Firmware Dev.",
+      duration: "2015 - 2017",
     },
     {
-      company: "Teach Academy 3",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
-    },
-    {
-      company: "Teach Academy 4",
-      position: "UI/UX Designer",
-      duration: "2018 - 2019",
+      company: "Grupo Digicon",
+      position: "Full stack - Firmware Dev.",
+      duration: "2013 - 2015",
     },
   ],
 };
@@ -126,8 +125,8 @@ const education = {
 
 //skills data
 const skills = {
-  title: "My skills",
-  description: "ashkjashkjf aksjfhkjashfkja akjshfjahsfkah ahskjfhaskf",
+  title: "Minhas Habilidades",
+  description: "Experiência em desenvolvimento de software em um conjunto robusto de tecnologias atuais que me permitem construir aplicações eficientes, responsivas e escaláveis. Meu foco é desenvolver interfaces de usuário intuitivas, sistemas back-end performáticos e soluções integradas de hardwares.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -158,8 +157,24 @@ const skills = {
       name: "node.js",
     },
     {
-      icon: <FaFigma />,
-      name: "figma",
+      icon: <FaDocker />,
+      name: "docker",
+    },
+    {
+      icon: <TbBrandCpp />,
+      name: "c++",
+    },
+    {
+      icon: <FaJava />,
+      name: "java",
+    },
+    {
+      icon: <SiSpring />,
+      name: "spring",
+    },
+    {
+      icon: <SiStrapi />,
+      name: "strapi",
     },
   ],
 };
@@ -172,22 +187,23 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] flex pt-6"
     >
-      <div className="container mx-auto ">
+      <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px] "
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6 ">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About me</TabsTrigger>
+          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
+            <TabsTrigger value="experience">Experiência</TabsTrigger>
+            {/*<TabsTrigger value="education">Education</TabsTrigger>*/}
+            <TabsTrigger value="publication">Publicação</TabsTrigger>
+            <TabsTrigger value="skills">Habilidades</TabsTrigger>
+            <TabsTrigger value="about">Sobre mim</TabsTrigger>
           </TabsList>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[70vh] w-full pb-10">
             {/* experience */}
             <TabsContent
               value="experience"
@@ -195,7 +211,7 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                <p className="w-full text-white/60 mx-auto xl:mx-0 text-justify text-[15px]">
                   {experience.description}
                 </p>
                 <ScrollArea className="h-[480px]">
@@ -213,7 +229,7 @@ const Resume = () => {
                           <div className="flex items-center gap-3">
                             {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">item.caompany</p>
+                            <p className="text-white/60">{item.company}</p>
                           </div>
                         </li>
                       );
@@ -223,50 +239,59 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            {/* education */}
+            {/* publicação */}
             <TabsContent
-              value="education"
+              value="publication"
               className="w-full"
             >
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold"></h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {education.description}
+                <h3 className="text-3xl font-bold text-justify">Drone teleguiado para instalação de esfera de sinalização / Esfera robótica</h3>
+                <p className="w-full text-white/60 mx-auto xl:mx-0 text-justify tet-[15px]">
+                  "Este artigo científico aborda o desenvolvimento de um sistema inovador utilizando um drone teleguiado para a instalação de esferas de sinalização em linhas de transmissão, integrando também o uso de uma esfera robótica. O projeto destaca a aplicação de tecnologias avançadas para aumentar a eficiência e segurança desse processo.
+                  Atuei como líder técnico do projeto, sendo responsável pelo desenvolvimento de firmware dos diversos equipamentos embarcados que compõem a solução, garantindo precisão e integração entre os sistemas envolvidos."
                 </p>
-                <ScrollArea className="h-[480px]">
-                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {education.items.map((item, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 roundex-xl flex flex-col justify-center items-center lg:item-start gap-1"
-                        >
-                          <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h[60px] text-center lg:text-left">
-                            {item.degree}
-                          </h3>
-                          <div className="flex items-center gap-3">
-                            {/* dot */}
-                            <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                            <p className="text-white/60">{item.institution}</p>
-                          </div>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </ScrollArea>
+                <div className="flex flex-col w-full ">
+                  <div className="relative border border-accent rounded-lg p-1">
+                    <Image
+                      src="/assets/capa-pub.png"
+                      priority
+                      quality={100}
+                      layout="responsive" // Ocupa a largura total da div pai e ajusta o height proporcionalmente
+                      width={400} // Define uma largura base
+                      height={300} // Define uma altura base (proporcional, não fixa)
+                      alt="Capa da Publicação"
+                      className="object-contain"
+                    />
+                  </div>
+                  <div className="flex flex-col xl:flex-row justify-end items-center pt-6">
+                    <a
+                      href="/808_paper_CIGRECanada2024_v9_240715_195320.pdf" // Caminho do arquivo dentro da pasta public
+                      download="/public/808_paper_CIGRECanada2024_v9_240715_195320" // Nome do arquivo ao fazer o download
+                      className="w-[230px]" // Define a largura do link
+                    >
+                      <Button
+                        variant="outline"
+                        size="lg"
+                        className="justify-around uppercase flex w-[230px] items-center text-accent hover:text-primary transition-all duration-700"
+                      >
+                        <span>Download Pub</span>
+                        <FiDownload className="text-xl" />
+                      </Button>
+                    </a>
+                  </div>
+                </div>
               </div>
             </TabsContent>
 
             {/* skills */} 
             <TabsContent
               value="skills"
-              className="w-full h-full"
+              className="w-full"
             >
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  <p className="w-full text-white/60 mx-auto xl:mx-0 text-justify text-[15px]">
                     {skills.description}
                   </p>
                 </div>
@@ -298,7 +323,7 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                <p className="w-full text-white/60 mx-auto xl:mx-0 text-justify text-[15px]">{about.description}</p>
                   <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                     {about.info.map((item, index) => {
                       return (

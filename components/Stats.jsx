@@ -8,17 +8,18 @@ const stats = [
     text: "Anos de experiência",
   },
   {
-    num: 26,
+    num: 1,
+    text: "Artigo publicado",
+  },
+  {
+    num: 20,
     text: "Projetos finalizados",
   },
   {
-    num: 12,
+    num: 20,
     text: "Tecnologias conhecidas",
   },
-  {
-    num: 1,
-    text: "Artigo publicado",
-  }
+  
 ]
 
 const Stats = () => {
@@ -35,6 +36,10 @@ const Stats = () => {
                   delay={2}
                   className="text-4xl xl:text-6xl font-extrabold"
                 />
+                {index == 2 || index == 3 ?
+                <h2 className="h2 items-start -ml-3">+</h2> :
+                ''
+                }
                 <p className={`${
                   item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"
                 }`}>

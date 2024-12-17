@@ -13,20 +13,24 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-md xl:text-xl">Desenvolvedor de Software</span>
             <h1 className="h1 mb-6">Oi, me chamo <br /> <span className="text-accent">Danilo Maletta</span></h1>
-            <p className="max-w-[600px] mb-9 text-white/80">I excel at crafting elegant digital experiences and I proficient in carius programming language and technologies</p>
+            <p className="max-w-[600px] mb-9 text-white/80">Sou excelente em criar experiências digitais elegantes e sou proficiente em várias linguagens de programação e tecnologias.</p>
 
             {/* btn and socials */}
-            <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2 hover:text-primary hover:transition-all duration-500">
-                <span>Download CV</span>
-                <FiDownload className="text-xl"/>
-              </Button>
-              <div className="mb-8 xl:mb-0">
+            <div className="flex flex-col xl:flex-row justify-center items-center gap-8">
+            <Button
+              variant="outline"
+              size="lg"
+              className="uppercase flex w-[50%] items-center gap-2 text-accent hover:text-primary transition-all duration-700"
+            >
+              <span>Download CV</span>
+              <FiDownload className="text-xl" />
+            </Button>
+              {/*<div className="mb-8 xl:mb-0">
                 <Social 
                   containerStyles="flex gap-6" 
                   iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
                 />
-              </div>
+              </div>*/}
             </div>
           </div>
           {/* photo */}

@@ -1,68 +1,67 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const Photo = () => {
+const MatrixEffect = () => {
+  const [matrixData, setMatrixData] = useState([]);
+  const [showImage, setShowImage] = useState(false);
+
+  // Gera os valores apenas no cliente após montagem
+  useEffect(() => {
+    const data = Array.from({ length: 100 }, () => ({
+      char: Math.random() > 0.5 ? "0" : "1",
+      delay: Math.random() * 2, // Delays aleatórios
+    }));
+    setMatrixData(data);
+
+    // Timer para mostrar a imagem após 3 segundos
+    const timer = setTimeout(() => setShowImage(true), 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="w-full h-full relative">
-      {/* image */}
+    <div className="relative flex justify-center items-center h-screen bg-black overflow-hidden">
+      {/* Camada do Efeito Matrix */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-        }}
+        className="absolute inset-0 flex flex-wrap text-green-500 text-xs md:text-sm lg:text-base leading-none"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0 }}
+        transition={{ duration: 1, delay: 8 }} // Fade-out após 2 segundos
       >
+        {matrixData.map((item, index) => (
+          <span
+            key={index}
+            className="animate-matrix"
+            style={{
+              animationDelay: `${item.delay}s`,
+            }}
+          >
+            {item.char}
+          </span>
+        ))}
+      </motion.div>
+
+      {/* Camada da Imagem com Fade-In */}
+      {showImage && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 2, duration: 0.4, ease: "easeIn" },
-          }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+          className="relative w-[300px] h-[300px] xl:w-[400px] xl:h-[400px] rounded-full overflow-hidden shadow-2xl"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 10, ease: "easeOut" }}
         >
           <Image
             src="/assets/photo.png"
-            priority
-            quality={100}
-            fill
-            alt=""
-            className="object-contain"
+            alt="Minha Foto"
+            layout="fill"
+            objectFit="cover"
+            className="object-center"
           />
         </motion.div>
-
-        {/* circle */}
-        <motion.svg
-          className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
-          fill="transparent"
-          viewBox="0 0 506 506"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <motion.circle
-            cx="253"
-            cy="253"
-            r="250"
-            stroke="#00ff99"
-            strokeWidth="4"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            initial={{strokeDasharray: "24 10 0 0"}}
-            animate={{
-              strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"],
-              rotate: [120, 360]
-            }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              repeatType: "reverse"
-            }}
-          />
-        </motion.svg>
-      </motion.div>
+      )}
     </div>
   );
 };
 
-export default Photo;
-Photo;
+export default MatrixEffect;
