@@ -24,29 +24,52 @@ const projects = [
     category: "Automação",
     title: "Drone Teleguiado para instalação de esferas de sinalização",
     description: "Coordenei o desenvolvimento do projeto, trabalhando em parcerias para concepção e desenvovimento de um drone inteiramente inovador com tecnologia nacional, e desenvolvendo todas as tecnologias do ecossistema deste projeto para tornar possível a realização de operações reais. Desenvolvi todos os firmwares de operação dos dispositivos embarcados deste projeto e coordenei do desenvolvimento do simalador de voo integrado com visão computacional para testes de automatização do drone.",
-    stack: [{ name: "Html 5" }, { name: "Css" }, { name: "Javascript" }],
+    stack: [{ name: "C/C++" }, { name: "Qt" }, { name: "Gazebo" }, { name: "ROS" }],
     image: "/assets/work/thumb1.png",
-    live: "",
+    video: "/assets/work/DroneClipchamp.mp4",
+    extra: [{link: "https://drive.google.com/file/d/1KWT53NEz428c6cVesMCga-S8JzmBf-ce/preview"}, {link: "https://drive.google.com/file/d/1BpZhDrmWJkdHFkYCwKerwFKWl3Bi_2OH/preview"}, ],
+    live: "https://drive.google.com/file/d/1L05NQ952Cq06TEuDZHmfO1M329Jlpvyn/view?usp=drive_link",
     github: "",
   },
   {
     num: "02",
-    category: "full stack",
-    title: "project 2",
-    description: "akjshdkjh askjdhkjash askjfhakjsfh aksjhfjkasf",
-    stack: [{ name: "Html 5" }, { name: "Css" }, { name: "Javascript" }],
-    image: "/assets/work/thumb2.png",
-    live: "",
+    category: "Automação",
+    title: "Esféra robótica de sinalização",
+    description: "Pesquisa e desenvolvimento para solução de esfera de sinalização automatizada para redes de alta tensão; Desenvolvimento de firmware de automação de controle para movimento automatizado com multi-sensoriamento para identificação de todos os estágios de operação até a fixação da esfera;",
+    stack: [{ name: "C/C++" }],
+    image: "/assets/work/thumb4.gif",
+    extra: [{link:  "https://drive.google.com/file/d/1ah8mjXfjzuXKOYp0I7mv6TOA8-x1xYgu/preview" }],
+    live: "https://drive.google.com/file/d/1L05NQ952Cq06TEuDZHmfO1M329Jlpvyn/view?usp=drive_link",
     github: "",
   },
   {
     num: "03",
-    category: "frontend",
-    title: "project 3",
-    description: "akjshdkjh askjdhkjash askjfhakjsfh aksjhfjkasf",
-    stack: [{ name: "Javascript" }, { name: "Css" }],
+    category: "Full stack - Automação",
+    title: "Projeto de Eficiência Energética - LG",
+    description: "Desenvolvi o firmware para um dispositivo medidor de grandezas elétricas integrado ao sistema de controle, implementando protocolo de comunicação LoRa. Estruturei um serviço de mensageria para gerenciar eventos de 400 dispositivos em tempo real e projetei uma arquitetura multisserviço para garantir escalabilidade e eficiência operacional. Coordenando o desenvolvimento front e back end da solução.",
+    stack: [{ name: "Javascript" }, { name: "Node.js" }, { name: "React.js" }, { name: "Css" }, { name: "C/C++" }, { name: "Express.js" }, { name: "Socket.io" }, { name: "Redis" }, { name: "MySQL" }, { name: "NGINX" }, { name: "Docker" }],
+    image: "/assets/work/thumb2.png",
+    live: "https://docs.google.com/document/d/1BRfMVq0zpBsHX15wkh_Ic6RvIyKJq6NM/edit?usp=sharing&ouid=104540612671802151961&rtpof=true&sd=true",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "Full stack - Automação",
+    title: "Projeto de Eficiência Energética - Flex",
+    description: "Desenvolvi o firmware para um dispositivo medidor de grandezas elétricas integrado ao sistema de controle, implementando um protocolo de comunicação MQTT. Também criei uma interface gráfica utilizando React e integrei os serviços de backend com Node.js e RestAPI.",
+    stack: [{ name: "Javascript" }, { name: Node.js }, { name: "React.js" }, { name: "Css" }, { name: "C/C++" }, { name: "Express.js" }, { name: "Socket.io" }, { name: "Redis" }, { name: "MySQL" }, { name: "NGINX" }, { name: "Docker" }],
+    image: "/assets/work/thumb-flex.png",
+    live: "https://docs.google.com/document/d/1TCrwpGDrHDT6GEooKhzazWWv9FKFqr-Q/edit?usp=sharing&ouid=104540612671802151961&rtpof=true&sd=true",
+    github: "",
+  },
+  {
+    num: "05",
+    category: "Full stack",
+    title: "Centro de Controle de Processos CCPIA",
+    description: "Desenvolvi uma aplicação Full Stack para controle de processos, integrando diversos servidores e sistemas internos da Jabil. Implementei soluções para o tratamento de dados de produção, gerando gráficos e informações essenciais em tempo real para otimizar a eficiência da linha de produção.",
+    stack:  [{ name: "Javascript" }, { name: "Node.js" }, { name: "React.js" }, { name: "Css" }, { name: "Express.js" },{ name: "SQL" }, { name: "Docker" }],
     image: "/assets/work/thumb3.png",
-    live: "",
+    live: "https://docs.google.com/document/d/1QcPkQWZKM7SUHjE8PuAaZVKE8-W3y10v/edit?usp=sharing&ouid=104540612671802151961&rtpof=true&sd=true",
     github: "",
   },
 ];
@@ -70,102 +93,138 @@ const Work = () => {
       className="h-full flex flex-col justify-center py-2 xl:px-0"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
-              <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-                {project.num}
+        <div className="flex flex-col xl:gap-[30px] ">
+          <div className="w-full flex justify-center">
+            <div className="w-full xl:w-[100%]">
+              <div className="flex flex-row items-end pb-6">
+                <div className="text-7xl leading-none font-extrabold text-transparent text-outline">
+                  {project.num}
+                </div>
+                {/* project category */}
+                <h2 className="text-5xl font-bold leading-none text-white group:hover:text-accent transition-all duration-500 capitalize whitespace-pre">
+                {` - ${project.category}`}
+                </h2>
               </div>
-              {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group:hover:text-accent transition-all duration-500 capitalize">
-                {project.category}
-              </h2>
-              {/* project description */}
-              <p className="text-white/60 text-justify text-[14px]">{project.description}</p>
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  console.log(project);
+              <Swiper
+                spaceBetween={30}
+                slidesPerView={1}
+                className="xl:h-[460px] mb-12"
+                onSlideChange={handleSlideChange}
+              >
+                {projects.map((project, index) => {
                   return (
-                    <li
+                    <SwiperSlide
                       key={index}
-                      className="text-xl text-accent"
+                      className="w-full"
                     >
-                      {item.name}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
+                      <div className="h-[300px] md:h-[460px] relative group flex justify-center items-center bg-primary">
+                        {/* overlay */}
+                        <div className="absolute top-0 bottom-0 w-full h-full bg-transparent z-10"></div>
+                        {/* image */}
+                        <div className="relative w-full h-full max-w-[740px]">
+                          {
+                            project.video ?
+                            <video className="w-full h-full object-cover" autoPlay loop muted playsInline>
+                              <source src={project.video} type="video/mp4" />
+                              Seu navegador não suporta vídeos.
+                            </video> :
+                            <Image
+                            src={project.image}
+                            fill
+                            className="object-center"
+                            alt=""
+                            />
+                          }
+                        </div>
+                      </div>
+                    </SwiperSlide>
                   );
                 })}
-              </ul>
-              {/* border */}
-              <div className="border border-white/20"></div>
-              {/* buttons */}
-              <div className="flex items-center gap-4">
-                {/* live project button */}
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                {/* github project button */}
-                <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsGithub />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github repositoryt</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
+                {/* slider buttons */}
+                <WorkSliderBtns
+                  containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] z-20 w-full justify-between"
+                  btnStyles="bg-primary border border-rounded border-accent hover:bg-accent-hover hover:text-primary text-accent text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all duration-500"
+                />
+              </Swiper>
+            </div>
+          </div>
+          <div className="w-full flex flex-col xl:justify-between order-2 xl:order-none pb-6">
+            <div className="flex flex-col xl:flex-row gap-[30px]">
+              {/* project description */}
+              <p className="text-white/60 text-justify text-[14px] w-full xl:w-[60%]">{project.description}</p>
+              <div className="flex flex-col xl:flex-row w-full xl:w-[40%]">
+                {/* border */}
+                <div className="border border-white/20 mr-4"></div>
+                <div className="flex flex-row w-full justify-between items-start">
+                  <ul className="flex flex-wrap gap-4 pt-4 xl:pt-0 pr-2">
+                    {project.stack.map((item, index) => {
+                      return (
+                        <li
+                          key={index}
+                          className="text-sm md:text-base text-accent text-justify"
+                        >
+                          {item.name}
+                          {index !== project.stack.length - 1 && ","}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  
+                  {/* buttons */}
+                  <div className="flex justify-end items-center gap-4 pt-4 xl:pt-0 w-[70px]">
+                    {/* live project button */}
+                    <Link target="_blank" href={project.live} rel="noopener noreferrer">
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                            <BsArrowUpRight />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Documentação</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </Link>
+                    {/* github project button 
+                    <Link href={project.github}>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                            <BsGithub />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>Github repositoryt</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </Link>*/}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">
-            <Swiper
-              spaceBetween={30}
-              slidesPerView={1}
-              className="xl:h-[520px] mb-12"
-              onSlideChange={handleSlideChange}
-            >
-              {projects.map((project, index) => {
-                return (
-                  <SwiperSlide
-                    key={index}
-                    className="w-full"
-                  >
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                      {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                      {/* image */}
-                      <div className="relative w-full h-full max-w-[740px]">
-                        <Image
-                          src={project.image}
-                          fill
-                          className="object-center"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-              {/* slider buttons */}
-              <WorkSliderBtns
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between"
-                btnStyles="bg-primary border border-rounded border-accent hover:bg-accent-hover hover:text-primary text-accent text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all duration-500"
-              />
-            </Swiper>
-          </div>
         </div>
+        {/* Material extra */}
+          <div>
+            {project.extra && project.extra.length > 0 && (
+              <div className="pt-8">
+                <p className="pb-4">Um pouco mais do projeto..</p>
+                <div className="relative w-[full] h-[300px] md:h-[460px] bg-black">
+                  {project.extra.map((item, index) => (
+                    <iframe
+                      key={index}
+                      src={item.link}
+                      width="100%"
+                      height="100%"
+                      allow="autoplay"
+                      className="object-cover mb-4" // Adiciona espaço entre os iframes
+                    ></iframe>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
       </div>
     </motion.div>
   );

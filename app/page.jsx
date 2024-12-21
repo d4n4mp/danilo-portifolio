@@ -20,10 +20,16 @@ const Home = () => {
             <Button
               variant="outline"
               size="lg"
-              className="uppercase flex w-[50%] items-center gap-2 text-accent hover:text-primary transition-all duration-700"
+              className="uppercase flex w-[50%] min-w-[220px] items-center gap-2 text-accent hover:text-primary transition-all duration-700"
             >
-              <span>Download CV</span>
-              <FiDownload className="text-xl" />
+              <a
+                href="/Curriculum_Vitae___Danilo_Maletta.pdf"
+                download="Curriculum_Vitae___Danilo_Maletta.pdf"
+                className="flex w-full justify-center items-center"
+              >
+                <span className="pr-4">Download CV</span>
+                <FiDownload className="text-xl" />
+              </a>
             </Button>
             </div>
           </div>
