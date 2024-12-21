@@ -7,13 +7,13 @@
     @apply font-primary bg-primary text-white leading-loose;
   }
   .h1 {
-    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+    @apply text-[42px] sm:text-[60px] xl:text-[78px] leading-[1.1] font-semibold;
   }
   .h2 {
-    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+    @apply text-[32px] sm:text-[40px] xl:text-[48px] leading-[1.1] font-semibold;
   }
   .h3 {
-    @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
+    @apply text-[20px] sm:text-[22px] xl:text-[24px] leading-[1.1] font-semibold;
   }
   .text-outline {
     -webkit-text-stroke: 1px #ffffff;
@@ -23,6 +23,27 @@
     -webkit-text-stroke: 1px #DAA520;
   }
 }
+
+@layer utilities {
+  input:-webkit-autofill {
+    @apply bg-primary border border-white/10 text-white caret-white;
+    -webkit-box-shadow: 0 0 0px 1000px #1c1c22 inset !important; /* Cor de fundo */
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9) !important; /* Cor do texto */
+    transition: background-color 5000s ease-in-out 0s;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Mesmo estilo de borda */
+    caret-color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  input:focus {
+    @apply border border-accent;
+    border: 1px solid rgb(218 165 32 / var(--tw-border-opacity, 1)) !important;
+  }
+}
+
+
+
+
+
 
 @keyframes matrixRain {
   0% {

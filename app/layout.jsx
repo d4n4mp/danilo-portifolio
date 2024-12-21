@@ -29,15 +29,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${jetbrainsMono.variable}`}
-      >
-        <Header />
-        <StairTransition />
-        <PageTransition>
-        {children}
-
-        </PageTransition>
+      <body className={`${jetbrainsMono.variable} h-screen overflow-y-scroll`}>
+        <div className="flex flex-col h-full">
+          <Header />
+          <main className="flex-1">
+            <StairTransition />
+            <PageTransition>{children}</PageTransition>
+          </main>
+        </div>
       </body>
     </html>
   );

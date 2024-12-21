@@ -21,9 +21,9 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "frontend",
-    title: "project 1",
-    description: "akjshdkjh askjdhkjash askjfhakjsfh aksjhfjkasf",
+    category: "Automação",
+    title: "Drone Teleguiado para instalação de esferas de sinalização",
+    description: "Coordenei o desenvolvimento do projeto, trabalhando em parcerias para concepção e desenvovimento de um drone inteiramente inovador com tecnologia nacional, e desenvolvendo todas as tecnologias do ecossistema deste projeto para tornar possível a realização de operações reais. Desenvolvi todos os firmwares de operação dos dispositivos embarcados deste projeto e coordenei do desenvolvimento do simalador de voo integrado com visão computacional para testes de automatização do drone.",
     stack: [{ name: "Html 5" }, { name: "Css" }, { name: "Javascript" }],
     image: "/assets/work/thumb1.png",
     live: "",
@@ -65,9 +65,9 @@ const Work = () => {
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
+        transition: { delay: 1.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
+      className="h-full flex flex-col justify-center py-2 xl:px-0"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
@@ -81,7 +81,7 @@ const Work = () => {
                 {project.category}
               </h2>
               {/* project description */}
-              <p className="text-white/60">{project.description}</p>
+              <p className="text-white/60 text-justify text-[14px]">{project.description}</p>
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => {
                   console.log(project);

@@ -5,10 +5,12 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaNodeJs, FaJava, FaDocker  
+  FaNodeJs,
+  FaJava,
+  FaDocker,
 } from "react-icons/fa";
 import { TbBrandCpp } from "react-icons/tb";
-import { SiTailwindcss, SiNextdotjs, SiSpring, SiStrapi  } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiSpring, SiStrapi } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
@@ -17,11 +19,10 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Button } from "@/components/ui/button"
-import { FiDownload } from "react-icons/fi"
+import { Button } from "@/components/ui/button";
+import { FiDownload } from "react-icons/fi";
 import { motion } from "framer-motion";
-import Image from "next/image"
-
+import Image from "next/image";
 
 const about = {
   title: "Sobre mim",
@@ -59,66 +60,58 @@ const about = {
 const experience = {
   icon: "/assets/resume/badge.svg",
   title: "Minha experiência",
-  description: "Construí minha carreira em um instituto de pesquisa e desenvolvimento, onde tive a oportunidade única de trabalhar em projetos de diversas áreas tecnológicas e com diferentes soluções. Esse ambiente multidisciplinar me permitiu explorar, na prática, todos os campos de atuação de uma solução tecnológica: desde o desenvolvimento de dispositivos com software de baixo nível, passando por aplicações high-end com interfaces gráficas fluidas, até a gestão completa de projetos. Essa experiência diversificada ampliou minha visão sistêmica e aprofundou minha expertise em todo o ciclo de desenvolvimento de tecnologias.",
+  description:
+    "Construí minha carreira em um instituto de pesquisa e desenvolvimento, onde tive a oportunidade única de trabalhar em projetos de diversas áreas tecnológicas e com diferentes soluções. Esse ambiente multidisciplinar me permitiu explorar, na prática, todos os campos de atuação de uma solução tecnológica: desde o desenvolvimento de dispositivos com software de baixo nível, passando por aplicações high-end com interfaces gráficas fluidas, até a gestão completa de projetos. Essa experiência diversificada ampliou minha visão sistêmica e aprofundou minha expertise em todo o ciclo de desenvolvimento de tecnologias.",
   items: [
     {
-      company: "Cemig GT",
+      company: "Grupo ICTS - Cemig GT",
       position: "Gestão de Projeto & Firmware Dev.",
       duration: "2022 - 2024",
     },
     {
       company: "Grupo ICTS",
       position: "Full Stack Dev.",
-      duration: "2020 - 2022",
+      duration: "2021 - 2022",
     },
     {
-      company: "LG / Grupo ICTS",
-      position: "Gestão de Projeto - Firmware Dev.",
-      duration: "2018 - 2020",
+      company: "Grupo ICTS - Jabil",
+      position: "Gestão de Projeto & Full Stack Dev.",
+      duration: "2020 - 2021",
     },
     {
-      company: "NCR",
-      position: "Firmware Dev.",
+      company: "ICTS - LG Electronics",
+      position: "Gestão de Projeto & Firmware Dev.",
+      duration: "2019 - 2020",
+    },
+    {
+      company: "Grupo ICTS - Flex",
+      position: "Full Stack Dev.",
+      duration: "2018 - 2019",
+    },
+    {
+      company: "Grupo ICTS - Trópico",
+      position: "Full Stack Dev.",
+      duration: "2018 - 2018",
+    },
+    {
+      company: "Grupo ICTS - NCR",
+      position: "Firmware-API Dev.",
       duration: "2017 - 2018",
     },
     {
-      company: "Sicoob",
-      position: "Firmware Dev.",
+      company: "Grupo ICTS - Sicoob",
+      position: "Firmware-API Dev.",
       duration: "2015 - 2017",
     },
     {
-      company: "Grupo Digicon",
-      position: "Full stack - Firmware Dev.",
-      duration: "2013 - 2015",
-    },
-  ],
-};
-
-//experience education
-const education = {
-  icon: "/assets/resume/cap.svg",
-  title: "My education",
-  description: "hashdjashjd ajkshdkjsa akjshjhds",
-  items: [
-    {
-      institution: "Online Course Platform",
-      degree: "Full Stack Web Developer Bootcamp",
-      duration: "2017 - 2021",
+      company: "Grupo ICTS - Grupo Digicon",
+      position: "Full stack Dev.",
+      duration: "2014 - 2015",
     },
     {
-      institution: "Codeacademy",
-      degree: "Front-end Track",
-      duration: "2017 - 2021",
-    },
-    {
-      institution: "UniCEUB",
-      degree: "Full Stack Web Developer Bootcamp",
-      duration: "2017 - 2021",
-    },
-    {
-      institution: "Tech Institute",
-      degree: "Full Stack Web Developer Bootcamp",
-      duration: "2017 - 2021",
+      company: "ICTS - Banco do Brasil",
+      position: "Firmware-API Dev.",
+      duration: "2012 - 2014",
     },
   ],
 };
@@ -126,7 +119,8 @@ const education = {
 //skills data
 const skills = {
   title: "Minhas Habilidades",
-  description: "Experiência em desenvolvimento de software em um conjunto robusto de tecnologias atuais que me permitem construir aplicações eficientes, responsivas e escaláveis. Meu foco é desenvolver interfaces de usuário intuitivas, sistemas back-end performáticos e soluções integradas de hardwares.",
+  description:
+    "Experiência em desenvolvimento de software em um conjunto robusto de tecnologias atuais que me permitem construir aplicações eficientes, responsivas e escaláveis. Meu foco é desenvolver interfaces de usuário intuitivas, sistemas back-end performáticos e soluções integradas de hardwares.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -187,7 +181,7 @@ const Resume = () => {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex pt-6"
+      className="min-h-[80vh] flex pt-2"
     >
       <div className="container mx-auto">
         <Tabs
@@ -223,9 +217,10 @@ const Resume = () => {
                           className="bg-[#232329] h-[184px] py-6 px-10 roundex-xl flex flex-col justify-center items-center lg:item-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="flex text-xl max-w-[260px] min-h-[60px] text-center justify-center items-center leading-tight">
                             {item.position}
                           </h3>
+
                           <div className="flex items-center gap-3">
                             {/* dot */}
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
@@ -245,10 +240,13 @@ const Resume = () => {
               className="w-full"
             >
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-3xl font-bold text-justify">Drone teleguiado para instalação de esfera de sinalização / Esfera robótica</h3>
+                <h3 className="text-3xl font-bold text-justify">
+                  Drone teleguiado para instalação de esfera de sinalização /
+                  Esfera robótica
+                </h3>
                 <p className="w-full text-white/60 mx-auto xl:mx-0 text-justify tet-[15px]">
-                  "Este artigo científico aborda o desenvolvimento de um sistema inovador utilizando um drone teleguiado para a instalação de esferas de sinalização em linhas de transmissão, integrando também o uso de uma esfera robótica. O projeto destaca a aplicação de tecnologias avançadas para aumentar a eficiência e segurança desse processo.
-                  Atuei como líder técnico do projeto, sendo responsável pelo desenvolvimento de firmware dos diversos equipamentos embarcados que compõem a solução, garantindo precisão e integração entre os sistemas envolvidos."
+                  {`Este artigo científico aborda o desenvolvimento de um sistema inovador utilizando um drone teleguiado para a instalação de esferas de sinalização em linhas de transmissão, integrando também o uso de uma esfera robótica. O projeto destaca a aplicação de tecnologias avançadas para aumentar a eficiência e segurança desse processo.
+                  Atuei como líder técnico do projeto, sendo responsável pela arquitetura do projeto, coordenação de atividades da equipe e pelo desenvolvimento de firmware dos diversos equipamentos embarcados que compõem a solução, garantindo precisão e integração entre os sistemas envolvidos.`}
                 </p>
                 <div className="flex flex-col w-full ">
                   <div className="relative border border-accent rounded-lg p-1">
@@ -283,7 +281,7 @@ const Resume = () => {
               </div>
             </TabsContent>
 
-            {/* skills */} 
+            {/* skills */}
             <TabsContent
               value="skills"
               className="w-full"
@@ -302,7 +300,9 @@ const Resume = () => {
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
                             </TooltipTrigger>
                             <TooltipContent>
                               <p className="capitalize">{skill.name}</p>
@@ -310,7 +310,7 @@ const Resume = () => {
                           </Tooltip>
                         </TooltipProvider>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>
@@ -323,17 +323,22 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="w-full text-white/60 mx-auto xl:mx-0 text-justify text-[15px]">{about.description}</p>
-                  <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                    {about.info.map((item, index) => {
-                      return (
-                        <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                          <span className="text-white/60">{item.fieldName}</span>
-                          <span className="text-base">{item.fieldValue}</span>
-                        </li>
-                      )
-                    })}
-                  </ul>
+                <p className="w-full text-white/60 mx-auto xl:mx-0 text-justify text-[15px]">
+                  {about.description}
+                </p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-base">{item.fieldValue}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             </TabsContent>
           </div>

@@ -5,26 +5,23 @@ import { usePathname } from "next/navigation"
 import React from 'react'
 
 const links = [
-    {
-        name: "home",
-        path: "/",
-    },
-    {
-        name: "services",
-        path: "/services",
-    },
-    {
-        name: "resume",
-        path: "/resume",
-    },
-    {
-        name: "work",
-        path: "/work",
-    },
-    {
-        name: "contact",
-        path: "/contact",
-    },
+  {
+    name: "início",
+    path: "/",
+  },
+  {
+    name: "serviços",
+    path: "/services",
+  },
+  {
+    name: "currículo",
+    path: "/resume",
+  },
+  {
+    name: "Trabalhos",
+    path: "/work",
+  },
+
 ];
 
 const Nav = () => {

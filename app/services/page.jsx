@@ -8,7 +8,7 @@ const services = [
   {
     num: "01",
     title: "Front-end Dev.",
-    description: "Crio interfaces modernas, interativas e responsivas, focadas em entregar a melhor experiência ao usuário. Utilizo entre diversas tecnologias, HTML5, CSS3, Java/TypeScript e frameworks modernos, React e Next.js, para transformar designs em realidade funcional e intuitiva.",
+    description: "Crio interfaces modernas, interativas e responsivas, focadas em entregar a melhor experiência ao usuário. Utilizo entre diversas tecnologias, HTML5, CSS3, Java/TypeScript, Next.js, Tailwind.css e FramerMotion, para transformar designs em realidade funcional",
     href: "",
   },
   {
@@ -20,7 +20,7 @@ const services = [
   {
     num: "03",
     title: "Firmware Dev.",
-    description: "Programo firmwares otimizados para dispositivos embarcados, com foco em controle de hardware e eficiência. Experiência com linguagens C/C++ e plataformas ESP32, Arduino e STM32, desenvolvendo soluções para IoT, automação e sistemas de controle.",
+    description: "Programo firmwares otimizados para dispositivos embarcados. Experiência com linguagens C/C++ e plataformas ESP32, Arduino e STM32, desenvolvendo soluções para IoT, automação e sistemas de controle.",
     href: "",
   },
   {
@@ -57,16 +57,16 @@ const Services = () => {
                     </div>
                     <Link
                       href={services.href}
-                      className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                      className="w-[65px] h-[65px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
                     >
                       <BsArrowDownRight className="text-primary text-3xl" />
                     </Link>
                   </div>
                   {/* title */}
-                  <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 pt-2">{services.title}</h2>
+                  <h2 className="text-[38px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 pt-2">{services.title}</h2>
                 </div>
                 {/* description */}
-                <p className="text-shite/60">{services.description}</p>
+                <p className="text-shite/60 text-[15px]">{services.description}</p>
                 
                 {/* border */}
                 <div className="border-b border-white/20 w-full"></div>

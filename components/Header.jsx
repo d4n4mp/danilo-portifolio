@@ -17,8 +17,8 @@ const Header = () => {
         <div className="hidden xl:flex items-center gap-8">
             <Nav />
             <Link href="contact">
-              <Button className="text-primary border border-primary hover:text-accent hover:bg-primary hover:border-accent transition-all duration-700">
-                Hire me
+            <Button className="text-primary border border-primary hover:text-accent hover:bg-primary hover:border-accent transition-all duration-700">
+                    Contato
               </Button>
             </Link>
         </div>
