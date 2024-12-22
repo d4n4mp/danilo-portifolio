@@ -8,7 +8,7 @@ const MatrixEffect = () => {
   const [showImage, setShowImage] = useState(false);
   const [cellSize, setCellSize] = useState(500); // Estado para controlar cellWidth e cellHeight
 
-  const rows = 15; // Mais linhas para blocos menores
+  const rows = 20; // Mais linhas para blocos menores
   const cols = 15; // Mais colunas para blocos menores
   const columns = 20; // Número de colunas (ajustável)
   
@@ -37,7 +37,7 @@ const MatrixEffect = () => {
   };
 
   return (
-    <div className="relative flex justify-center items-center bg-transparent overflow-hidden">
+    <div className="relative flex justify-center items-center bg-transparent overflow-hidden h-full">
       
 
       {/* Camada do Efeito Matrix */}
@@ -47,7 +47,7 @@ const MatrixEffect = () => {
             className="absolute inset-0 flex flex-wrap text-accent text-xs md:text-sm lg:text-base leading-none"
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }} // Fade-out do Matrix
-            transition={{ duration: 3, delay: 3 }} // Fade-out começa após 10s e dura 5s
+            transition={{ duration: 2.5, delay: 2.5 }} // Fade-out começa após 10s e dura 5s
           >
             {matrixData.map((column, columnIndex) => (
               <motion.div
@@ -56,7 +56,8 @@ const MatrixEffect = () => {
                 animate={{ y: "100%" }}
                 transition={{
                   repeat: Infinity,
-                  duration: Math.random() * 2 + 2, // Duração aleatória
+                  duration: Math.random() * 2 + 4, // Duração aleatória
+                  //repeatDelay: 1, // Permite overlap nas repetições
                   ease: "linear",
                 }}
                 style={{
@@ -99,7 +100,7 @@ const MatrixEffect = () => {
                   animate={{ opacity: 1, filter: "blur(0px)" }} // Remove o blur durante a animação
                   transition={{
                     duration: 2,
-                    delay: 4.8 + Math.random() * 4, // Delay aleatório para cada bloco
+                    delay: 3.8 + Math.random() * 4, // Delay aleatório para cada bloco
                   }}
                   style={{
                     width: `${cellSize / cols}px`,
