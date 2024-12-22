@@ -23,7 +23,7 @@ function ContactForm() {
 
   if (state.succeeded) {
     return (
-      <p className="text-center text-green-500">
+      <p className="text-center text-accent">
         Mensagem enviada com sucesso!
       </p>
     );

@@ -10,7 +10,7 @@ const MatrixEffect = () => {
 
   const rows = 15; // Mais linhas para blocos menores
   const cols = 15; // Mais colunas para blocos menores
-  const columns = 25; // Número de colunas (ajustável)
+  const columns = 30 // Número de colunas (ajustável)
   
   // Detecta largura da tela e ajusta o tamanho das células
   useEffect(() => {
@@ -44,7 +44,7 @@ const MatrixEffect = () => {
       {showImage ? (
         <>
           <motion.div
-            className="absolute inset-0 flex flex-wrap text-accent text-xs md:text-sm lg:text-base leading-none"
+            className="absolute inset-0 flex flex-wrap text-accent leading-none"
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }} // Fade-out do Matrix
             transition={{ duration: 2.5, delay: 2.5 }} // Fade-out começa após 10s e dura 5s
@@ -69,10 +69,10 @@ const MatrixEffect = () => {
                 {column.chars.map((char, charIndex) => (
                   <motion.span
                     key={charIndex}
-                    className="block text-accent font-mono text-[10px] md:text-sm lg:text-lg"
+                    className="block text-accent font-mono text-lg"
                     style={{
                       opacity: Math.random(),
-                      animationDelay: `${Math.random() * 1}s`,
+                      animationDelay: `${Math.random() * 6 + 1}s`,
                     }}
                   >
                     {char}
@@ -100,7 +100,7 @@ const MatrixEffect = () => {
                   animate={{ opacity: 1, filter: "blur(0px)" }} // Remove o blur durante a animação
                   transition={{
                     duration: 2,
-                    delay: 3.8 + Math.random() * 4, // Delay aleatório para cada bloco
+                    delay: 3.8 + Math.random() * 3.5, // Delay aleatório para cada bloco
                   }}
                   style={{
                     width: `${cellSize / cols}px`,

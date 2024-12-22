@@ -207,8 +207,8 @@ const Work = () => {
         {/* Material extra */}
           <div>
             {project.extra && project.extra.length > 0 && (
-              <div className="pt-8">
-                <p className="pb-4">Um pouco mais do projeto..</p>
+              <div className="pt-16">
+                <p className="pb-4">Videos</p>
                 <div className="relative w-[full] h-[300px] md:h-[460px] bg-black">
                   {project.extra.map((item, index) => (
                     <iframe
