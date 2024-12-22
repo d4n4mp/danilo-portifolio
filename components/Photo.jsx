@@ -8,9 +8,9 @@ const MatrixEffect = () => {
   const [showImage, setShowImage] = useState(false);
   const [cellSize, setCellSize] = useState(500); // Estado para controlar cellWidth e cellHeight
 
-  const rows = 20; // Mais linhas para blocos menores
+  const rows = 15; // Mais linhas para blocos menores
   const cols = 15; // Mais colunas para blocos menores
-  const columns = 20; // Número de colunas (ajustável)
+  const columns = 25; // Número de colunas (ajustável)
   
   // Detecta largura da tela e ajusta o tamanho das células
   useEffect(() => {
@@ -37,7 +37,7 @@ const MatrixEffect = () => {
   };
 
   return (
-    <div className="relative flex justify-center items-center bg-transparent overflow-hidden h-full">
+    <div className="relative flex justify-center items-center bg-transparent overflow-hidden">
       
 
       {/* Camada do Efeito Matrix */}
@@ -56,7 +56,7 @@ const MatrixEffect = () => {
                 animate={{ y: "100%" }}
                 transition={{
                   repeat: Infinity,
-                  duration: Math.random() * 2 + 4, // Duração aleatória
+                  duration: Math.random() * 5 + 1.5, // Duração aleatória
                   //repeatDelay: 1, // Permite overlap nas repetições
                   ease: "linear",
                 }}
