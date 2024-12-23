@@ -37,7 +37,7 @@ const MatrixEffect = () => {
   };
 
   return (
-    <div className="relative flex justify-center items-center bg-transparent overflow-hidden">
+    <div className="relative flex justify-center items-center bg-transparent overflow-hidden h-full xl:mb-8">
       
 
       {/* Camada do Efeito Matrix */}
