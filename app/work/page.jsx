@@ -57,7 +57,7 @@ const projects = [
     category: "Full stack - Automação",
     title: "Projeto de Eficiência Energética - Flex",
     description: "Desenvolvi o firmware para um dispositivo medidor de grandezas elétricas integrado ao sistema de controle, implementando um protocolo de comunicação MQTT. Também criei uma interface gráfica utilizando React e integrei os serviços de backend com Node.js e RestAPI.",
-    stack: [{ name: "Javascript" }, { name: Node.js }, { name: "React.js" }, { name: "Css" }, { name: "C/C++" }, { name: "Express.js" }, { name: "Socket.io" }, { name: "Redis" }, { name: "MySQL" }, { name: "NGINX" }, { name: "Docker" }],
+    stack: [{ name: "Javascript" }, { name: "Node.js" }, { name: "React.js" }, { name: "Css" }, { name: "C/C++" }, { name: "Express.js" }, { name: "Socket.io" }, { name: "Redis" }, { name: "MySQL" }, { name: "NGINX" }, { name: "Docker" }],
     image: "/assets/work/thumb-flex.png",
     live: "https://docs.google.com/document/d/1TCrwpGDrHDT6GEooKhzazWWv9FKFqr-Q/edit?usp=sharing&ouid=104540612671802151961&rtpof=true&sd=true",
     github: "",
