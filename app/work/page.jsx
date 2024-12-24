@@ -145,8 +145,8 @@ const Work = () => {
       }}
       className="h-full flex flex-col justify-center py-2 xl:px-0"
     >
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:gap-[30px] ">
+      <div className="container mx-auto h-full">
+        <div className="flex flex-col xl:gap-[30px] justify-start">
           <div className="w-full flex items-start" >
             <div className="w-full xl:w-[100%] justify-end">
               <div className="flex flex-row items-end pb-6 ">
