@@ -21,7 +21,7 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "Automação",
+    category: "Automaçãoo",
     title: "Drone Teleguiado para instalação de esferas de sinalização",
     description:
       "Automatizei o processo de instalação de esferas, garantindo estabilidade durante o voo, com a implementação de um protocolo multi-dispositivos para controle remoto operacional do UAV. Coordenei o desenvolvimento do simulador de voo integrado com todas as tecnologias do drone real, incluindo Redes Neurais Multimodais para identificação de torres e esferas de sinalização.",
@@ -147,7 +147,7 @@ const Work = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:gap-[30px] ">
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-start">
             <div className="w-full xl:w-[100%]">
               <div className="flex flex-row items-end pb-6">
                 <div className="text-[22px] md:text-4xl lg:text-6xl leading-none font-extrabold text-transparent text-outline">
