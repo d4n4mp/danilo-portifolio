@@ -111,7 +111,7 @@ const MatrixEffect = () => {
                 {column.chars.map((char, charIndex) => (
                   <motion.span
                     key={charIndex}
-                    className="block text-accent font-mono text-4xl"
+                    className="block text-accent font-mono text-2xl md:text-4xl"
                     style={{
                       opacity: Math.random(),
                       animationDelay: `${Math.random() * 6 + 1.5}s`,
