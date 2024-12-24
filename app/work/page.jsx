@@ -23,11 +23,24 @@ const projects = [
     num: "01",
     category: "Automação",
     title: "Drone Teleguiado para instalação de esferas de sinalização",
-    description: "Coordenei o desenvolvimento do projeto, trabalhando em parcerias para concepção e desenvovimento de um drone inteiramente inovador com tecnologia nacional, e desenvolvendo todas as tecnologias do ecossistema deste projeto para tornar possível a realização de operações reais. Desenvolvi todos os firmwares de operação dos dispositivos embarcados deste projeto e coordenei do desenvolvimento do simalador de voo integrado com visão computacional para testes de automatização do drone.",
-    stack: [{ name: "C/C++" }, { name: "Qt" }, { name: "Gazebo" }, { name: "ROS" }],
+    description:
+      "Automatizei o processo de instalação de esferas, garantindo estabilidade durante o voo, com a implementação de um protocolo multi-dispositivos para controle remoto operacional do UAV. Coordenei o desenvolvimento do simulador de voo integrado com todas as tecnologias do drone real, incluindo Redes Neurais Multimodais para identificação de torres e esferas de sinalização.",
+    stack: [
+      { name: "C/C++" },
+      { name: "Qt" },
+      { name: "Gazebo" },
+      { name: "ROS" },
+    ],
     image: "/assets/work/thumb1.png",
     video: "/assets/work/DroneClipchamp.mp4",
-    extra: [{link: "https://drive.google.com/file/d/1KWT53NEz428c6cVesMCga-S8JzmBf-ce/preview"}, {link: "https://drive.google.com/file/d/1BpZhDrmWJkdHFkYCwKerwFKWl3Bi_2OH/preview"}, ],
+    extra: [
+      {
+        link: "https://drive.google.com/file/d/1KWT53NEz428c6cVesMCga-S8JzmBf-ce/preview",
+      },
+      {
+        link: "https://drive.google.com/file/d/1BpZhDrmWJkdHFkYCwKerwFKWl3Bi_2OH/preview",
+      },
+    ],
     live: "https://drive.google.com/file/d/1L05NQ952Cq06TEuDZHmfO1M329Jlpvyn/view?usp=drive_link",
     github: "",
   },
@@ -35,10 +48,15 @@ const projects = [
     num: "02",
     category: "Automação",
     title: "Esféra robótica de sinalização",
-    description: "Pesquisa e desenvolvimento para solução de esfera de sinalização automatizada para redes de alta tensão; Desenvolvimento de firmware de automação de controle para movimento automatizado com multi-sensoriamento para identificação de todos os estágios de operação até a fixação da esfera;",
+    description:
+      "Pesquisa e desenvolvimento para solução de esfera de sinalização automatizada para redes de alta tensão; Desenvolvimento de firmware de automação e controle para movimento automatizado com multi-sensoriamento para identificação de todos os estágios de operação até a fixação da esfera;",
     stack: [{ name: "C/C++" }],
     image: "/assets/work/thumb4.gif",
-    extra: [{link:  "https://drive.google.com/file/d/1ah8mjXfjzuXKOYp0I7mv6TOA8-x1xYgu/preview" }],
+    extra: [
+      {
+        link: "https://drive.google.com/file/d/1ah8mjXfjzuXKOYp0I7mv6TOA8-x1xYgu/preview",
+      },
+    ],
     live: "https://drive.google.com/file/d/1L05NQ952Cq06TEuDZHmfO1M329Jlpvyn/view?usp=drive_link",
     github: "",
   },
@@ -46,8 +64,21 @@ const projects = [
     num: "03",
     category: "Full stack - Automação",
     title: "Projeto de Eficiência Energética - LG",
-    description: "Desenvolvi o firmware para um dispositivo medidor de grandezas elétricas integrado ao sistema de controle, implementando protocolo de comunicação LoRa. Estruturei um serviço de mensageria para gerenciar eventos de 400 dispositivos em tempo real e projetei uma arquitetura multisserviço para garantir escalabilidade e eficiência operacional. Coordenando o desenvolvimento front e back end da solução.",
-    stack: [{ name: "Javascript" }, { name: "Node.js" }, { name: "React.js" }, { name: "Css" }, { name: "C/C++" }, { name: "Express.js" }, { name: "Socket.io" }, { name: "Redis" }, { name: "MySQL" }, { name: "NGINX" }, { name: "Docker" }],
+    description:
+      "Desenvolvi o firmware para um dispositivo medidor de grandezas elétricas integrado ao sistema de controle, implementando protocolo de comunicação LoRa. Estruturei um serviço de mensageria para gerenciar eventos de 400 dispositivos em tempo real e projetei uma arquitetura multisserviço para garantir escalabilidade e eficiência operacional. Coordenando o desenvolvimento front e back end da solução.",
+    stack: [
+      { name: "Javascript" },
+      { name: "Node.js" },
+      { name: "React.js" },
+      { name: "Css" },
+      { name: "C/C++" },
+      { name: "Express.js" },
+      { name: "Socket.io" },
+      { name: "Redis" },
+      { name: "MySQL" },
+      { name: "NGINX" },
+      { name: "Docker" },
+    ],
     image: "/assets/work/thumb2.png",
     live: "https://docs.google.com/document/d/1BRfMVq0zpBsHX15wkh_Ic6RvIyKJq6NM/edit?usp=sharing&ouid=104540612671802151961&rtpof=true&sd=true",
     github: "",
@@ -56,8 +87,21 @@ const projects = [
     num: "04",
     category: "Full stack - Automação",
     title: "Projeto de Eficiência Energética - Flex",
-    description: "Desenvolvi o firmware para um dispositivo medidor de grandezas elétricas integrado ao sistema de controle, implementando um protocolo de comunicação MQTT. Também criei uma interface gráfica utilizando React e integrei os serviços de backend com Node.js e RestAPI.",
-    stack: [{ name: "Javascript" }, { name: "Node.js" }, { name: "React.js" }, { name: "Css" }, { name: "C/C++" }, { name: "Express.js" }, { name: "Socket.io" }, { name: "Redis" }, { name: "MySQL" }, { name: "NGINX" }, { name: "Docker" }],
+    description:
+      "Desenvolvi o firmware para um dispositivo medidor de grandezas elétricas integrado ao sistema de controle, implementando um protocolo de comunicação MQTT. Também criei uma interface gráfica utilizando React e integrei os serviços de backend com Node.js e RestAPI.",
+    stack: [
+      { name: "Javascript" },
+      { name: "Node.js" },
+      { name: "React.js" },
+      { name: "Css" },
+      { name: "C/C++" },
+      { name: "Express.js" },
+      { name: "Socket.io" },
+      { name: "Redis" },
+      { name: "MySQL" },
+      { name: "NGINX" },
+      { name: "Docker" },
+    ],
     image: "/assets/work/thumb-flex.png",
     live: "https://docs.google.com/document/d/1TCrwpGDrHDT6GEooKhzazWWv9FKFqr-Q/edit?usp=sharing&ouid=104540612671802151961&rtpof=true&sd=true",
     github: "",
@@ -66,8 +110,17 @@ const projects = [
     num: "05",
     category: "Full stack",
     title: "Centro de Controle de Processos CCPIA",
-    description: "Desenvolvi uma aplicação Full Stack para controle de processos, integrando diversos servidores e sistemas internos da Jabil. Implementei soluções para o tratamento de dados de produção, gerando gráficos e informações essenciais em tempo real para otimizar a eficiência da linha de produção.",
-    stack:  [{ name: "Javascript" }, { name: "Node.js" }, { name: "React.js" }, { name: "Css" }, { name: "Express.js" },{ name: "SQL" }, { name: "Docker" }],
+    description:
+      "Desenvolvi uma aplicação Full Stack para controle de processos, integrando diversos servidores e sistemas internos da Jabil. Implementei soluções para o tratamento de dados de produção, gerando gráficos e informações essenciais em tempo real para otimizar a eficiência da linha de produção.",
+    stack: [
+      { name: "Javascript" },
+      { name: "Node.js" },
+      { name: "React.js" },
+      { name: "Css" },
+      { name: "Express.js" },
+      { name: "SQL" },
+      { name: "Docker" },
+    ],
     image: "/assets/work/thumb3.png",
     live: "https://docs.google.com/document/d/1QcPkQWZKM7SUHjE8PuAaZVKE8-W3y10v/edit?usp=sharing&ouid=104540612671802151961&rtpof=true&sd=true",
     github: "",
@@ -97,12 +150,12 @@ const Work = () => {
           <div className="w-full flex justify-center">
             <div className="w-full xl:w-[100%]">
               <div className="flex flex-row items-end pb-6">
-                <div className="text-7xl leading-none font-extrabold text-transparent text-outline">
+                <div className="text-[22px] md:text-4xl lg:text-6xl leading-none font-extrabold text-transparent text-outline">
                   {project.num}
                 </div>
                 {/* project category */}
-                <h2 className="text-5xl font-bold leading-none text-white group:hover:text-accent transition-all duration-500 capitalize whitespace-pre">
-                {` - ${project.category}`}
+                <h2 className="text-[18px] md:text-3xl lg:text-5xl font-bold leading-none text-white group:hover:text-accent transition-all duration-500 capitalize whitespace-pre">
+                  {` - ${project.category}`}
                 </h2>
               </div>
               <Swiper
@@ -122,19 +175,28 @@ const Work = () => {
                         <div className="absolute top-0 bottom-0 w-full h-full bg-transparent z-10"></div>
                         {/* image */}
                         <div className="relative w-full h-full max-w-[740px]">
-                          {
-                            project.video ?
-                            <video className="w-full h-full object-cover" autoPlay loop muted playsInline>
-                              <source src={project.video} type="video/mp4" />
+                          {project.video ? (
+                            <video
+                              className="w-full h-full object-cover"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                            >
+                              <source
+                                src={project.video}
+                                type="video/mp4"
+                              />
                               Seu navegador não suporta vídeos.
-                            </video> :
+                            </video>
+                          ) : (
                             <Image
-                            src={project.image}
-                            fill
-                            className="object-center"
-                            alt=""
+                              src={project.image}
+                              fill
+                              className="object-center"
+                              alt=""
                             />
-                          }
+                          )}
                         </div>
                       </div>
                     </SwiperSlide>
@@ -151,7 +213,9 @@ const Work = () => {
           <div className="w-full flex flex-col xl:justify-between order-2 xl:order-none pb-6">
             <div className="flex flex-col xl:flex-row gap-[30px]">
               {/* project description */}
-              <p className="text-white/60 text-justify text-[14px] w-full xl:w-[60%]">{project.description}</p>
+              <p className="text-white/60 text-justify text-[14px] w-full xl:w-[60%]">
+                {project.description}
+              </p>
               <div className="flex flex-col xl:flex-row w-full xl:w-[40%]">
                 {/* border */}
                 <div className="border border-white/20 mr-4"></div>
@@ -169,11 +233,15 @@ const Work = () => {
                       );
                     })}
                   </ul>
-                  
+
                   {/* buttons */}
                   <div className="flex justify-end items-center gap-4 pt-4 xl:pt-0 w-[70px]">
                     {/* live project button */}
-                    <Link target="_blank" href={project.live} rel="noopener noreferrer">
+                    <Link
+                      target="_blank"
+                      href={project.live}
+                      rel="noopener noreferrer"
+                    >
                       <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -205,26 +273,25 @@ const Work = () => {
           </div>
         </div>
         {/* Material extra */}
-          <div>
-            {project.extra && project.extra.length > 0 && (
-              <div className="pt-16">
-                <p className="pb-4">Videos</p>
-                <div className="relative w-[full] h-[300px] md:h-[460px] bg-black">
-                  {project.extra.map((item, index) => (
-                    <iframe
-                      key={index}
-                      src={item.link}
-                      width="100%"
-                      height="100%"
-                      allow="autoplay"
-                      className="object-cover mb-4" // Adiciona espaço entre os iframes
-                    ></iframe>
-                  ))}
-                </div>
+        <div>
+          {project.extra && project.extra.length > 0 && (
+            <div className="pt-16">
+              <p className="pb-4">Videos</p>
+              <div className="relative w-[full] h-[300px] md:h-[460px] bg-black">
+                {project.extra.map((item, index) => (
+                  <iframe
+                    key={index}
+                    src={item.link}
+                    width="100%"
+                    height="100%"
+                    allow="autoplay"
+                    className="object-cover mb-4" // Adiciona espaço entre os iframes
+                  ></iframe>
+                ))}
               </div>
-            )}
-          </div>
-
+            </div>
+          )}
+        </div>
       </div>
     </motion.div>
   );

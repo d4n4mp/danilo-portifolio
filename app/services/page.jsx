@@ -9,25 +9,25 @@ const services = [
     num: "01",
     title: "Front-end Dev.",
     description: "Crio interfaces modernas, interativas e responsivas, focadas em entregar a melhor experiência ao usuário. Utilizo entre diversas tecnologias, HTML5, CSS3, Java/TypeScript, Next.js, Tailwind.css e FramerMotion, para transformar designs em realidade funcional",
-    href: "",
+    href: "work",
   },
   {
     num: "02",
     title: "Back-end Dev.",
     description: "Possuo experiência no desenvolvimento de sistemas Node.js e Java para criação de servidores e APIs. Tenho expertise na integração de bancos de dados SQL e NoSQL. Conhecimento sólido nos principais frameworks, como Spring no ecossistema Java e Express.js no Node.js.",
-    href: "",
+    href: "work",
   },
   {
     num: "03",
     title: "Firmware Dev.",
     description: "Programo firmwares otimizados para dispositivos embarcados. Experiência com linguagens C/C++ e plataformas ESP32, Arduino e STM32, desenvolvendo soluções para IoT, automação e sistemas de controle.",
-    href: "",
+    href: "work",
   },
   {
     num: "04",
     title: "Gestão de Projetos",
     description: "Atuo na liderança e organização de projetos com metodologias ágeis. Coordeno equipes multidisciplinares, garantindo prazos, qualidade e comunicação eficaz entre todas as partes envolvidas, com foco na entrega de resultados.",
-    href: "",
+    href: "work",
   },
 ];
 

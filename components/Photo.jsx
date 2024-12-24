@@ -6,11 +6,50 @@ import { useEffect, useState } from "react";
 const MatrixEffect = () => {
   const [matrixData, setMatrixData] = useState([]);
   const [showImage, setShowImage] = useState(false);
-  const [cellSize, setCellSize] = useState(500); // Estado para controlar cellWidth e cellHeight
+  const [cellSize, setCellSize] = useState(null); // Inicializa com null para detectar no cliente
+
+  useEffect(() => {
+    // Ajusta o tamanho inicial com base na largura da tela
+    const calculateCellSize = () => {
+      const screenWidth = window.innerWidth;
+      return screenWidth > 500 ? 500 : screenWidth > 400 ? 400 : screenWidth - 40;
+    };
+
+    const initialCellSize = calculateCellSize();
+    setCellSize(initialCellSize);
+
+    // Listener para redimensionar
+    const handleResize = () => {
+      const newCellSize = calculateCellSize();
+      setCellSize(newCellSize);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup do listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const rows = 15; // Mais linhas para blocos menores
   const cols = 15; // Mais colunas para blocos menores
   const columns = 30 // Número de colunas (ajustável)
+  
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+
+      // Ajuste o cellSize dinamicamente com base na largura da tela
+      const newSize = screenWidth > 500 ? 500 : screenWidth > 400 ? 400 : screenWidth - 40;
+      setCellSize(newSize);
+    };
+
+    handleResize(); // Chame no início
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   
   // Detecta largura da tela e ajusta o tamanho das células
   useEffect(() => {
@@ -36,10 +75,13 @@ const MatrixEffect = () => {
     return chars[Math.floor(Math.random() * chars.length)];
   };
 
+  // Renderiza apenas se cellSize tiver sido definido
+  if (cellSize === null) {
+    return null; // Ou um spinner/placeholder para evitar renderização inconsistente
+  }
+  
   return (
     <div className="relative flex justify-center items-center bg-transparent overflow-hidden h-full xl:mb-8">
-      
-
       {/* Camada do Efeito Matrix */}
       {showImage ? (
         <>
